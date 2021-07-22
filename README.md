@@ -4,6 +4,10 @@
 
 ## Start
 
+**Ein paar Bitten**:
+* Setze für `LAT` und `LON` möglichst präzise die Koordinaten deines Anschlusses ein
+* Verwende für `USER` einen möglichst eindeutigen und aussagekräftigen Namen
+
 ### Shell
 
 ```bash
