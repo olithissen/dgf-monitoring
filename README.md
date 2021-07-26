@@ -2,13 +2,23 @@
 
 *Wir basteln uns unsere eigene Verfügbarkeitsprüfung für das Netz der Deutschen Glasfaser \o/*
 
-## Start
+## Seiten
+* Landing Page: https://dgf.tonick.net (Öffentlich)
+* Grafana: https://gfa.tonick.net (Gastzugang)
+* InfluxDB: https://ifx.tonick.net (Nur für geladene Gäste)
 
-**Ein paar Bitten**:
+## Setup
+
+### Ein paar Hinweise vorab
 * Setze für `LAT` und `LON` möglichst präzise die Koordinaten deines Anschlusses ein
 * Verwende für `USER` einen möglichst eindeutigen und aussagekräftigen Namen
 
-### Shell
+### Wie komme ich an mein Token?
+* Mail an oli[at_]tonick.net
+
+## Start
+
+### docker run
 
 ```bash
 docker run \
