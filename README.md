@@ -50,8 +50,8 @@ services:
 
 ## Vorhandene Telegraf Installation
 
-<todo>
+* todo ...
 
 ## Manuelle Datenlieferung über InfluxDB line protocol
  
-<todo>
+* todo ...
