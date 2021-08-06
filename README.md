@@ -53,5 +53,11 @@ services:
 * todo ...
 
 ## Manuelle Datenlieferung über InfluxDB line protocol
+
+Falls du eine andere Möglichkeit hast, um Daten aus `ping` rauszuholen, kann die Übertragung auch per HTTP POST im *InfluxDB line protocol* Format erfolgen:
  
-* todo ...
+```bash
+curl -i --request POST "https://ifx.tonick.net/api/v2/write?org=dgf&bucket=dgf_ping_manual" \ 
+    --header 'Authorization: Token <influxtoken>' \
+    --data-raw 'ping,lat=<lat>,lon=<lon>,host=<hostname>,url=8.8.8.8,user=<user> average_response_ms=1.0,maximum_response_ms=1.0,minimum_response_ms=1.0,packets_received=1,packets_transmitted=1,percent_packet_loss=0,result_code=0,standard_deviation_ms=1.0,ttl=123'
+```
