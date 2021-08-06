@@ -61,3 +61,15 @@ curl -i --request POST "https://ifx.tonick.net/api/v2/write?org=dgf&bucket=dgf_p
     --header 'Authorization: Token <influxtoken>' \
     --data-raw 'ping,lat=<lat>,lon=<lon>,host=<hostname>,url=8.8.8.8,user=<user> average_response_ms=1.0,maximum_response_ms=1.0,minimum_response_ms=1.0,packets_received=1,packets_transmitted=1,percent_packet_loss=0,result_code=0,standard_deviation_ms=1.0,ttl=123'
 ```
+
+Die Einhaltung des Formats ist wichtig:
+
+```
+ping,tag_key=tag_value,... field_key=field_value,...
+  |  ---------------------|-------------------------
+  |             |         |       |   
+  |             |         |       |   
++-----------+-------+-------+---------+
+|measurement|tag_set| SPACE |field_set|
++-----------+-------+-------+---------+
+```
