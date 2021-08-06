@@ -16,7 +16,7 @@
 ### Wie komme ich an mein Token?
 * Mail an oli[at_]tonick.net
 
-## Start
+## Docker
 
 ### docker run
 
@@ -26,7 +26,7 @@ docker run \
   -e LON=6.0 \
   -e USER=demo \
   -e INFLUXTOKEN=<dein_token> \
-  -v ./telegraf.conf:/etc/telegraf/telegraf.conf:ro \
+  -v ./configs/telegraf.conf:/etc/telegraf/telegraf.conf:ro \
   telegraf
 ```
 
@@ -40,10 +40,18 @@ services:
     restart: always
     image: "telegraf"
     volumes:
-      - "./telegraf.conf:/etc/telegraf/telegraf.conf:ro"
+      - "./configs/telegraf.conf:/etc/telegraf/telegraf.conf:ro"
     environment:
         LAT: 51.0
         LON: 6.0
         USER: demo
         INFLUXTOKEN: <dein_token>  
 ```
+
+## Vorhandene Telegraf Installation
+
+<todo>
+
+## Manuelle Datenlieferung über InfluxDB line protocol
+ 
+<todo>
